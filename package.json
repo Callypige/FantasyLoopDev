@@ -1,0 +1,31 @@
+{
+  "name": "fantasy-loop",
+  "version": "1.0.0",
+  "description": "A flexible text-based game engine for creating interactive fiction and adventure games",
+  "main": "game_engine.js",
+  "scripts": {
+    "start": "node game_engine.js",
+    "start:ts": "ts-node game_engine.ts",
+    "build": "tsc game_engine.ts",
+    "demo": "node game_engine.js",
+    "demo:ts": "ts-node game_engine.ts"
+  },
+  "keywords": [
+    "game",
+    "text-adventure",
+    "interactive-fiction",
+    "rpg",
+    "adventure",
+    "fantasy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
