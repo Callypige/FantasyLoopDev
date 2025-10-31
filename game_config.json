@@ -1,0 +1,119 @@
+{
+  "title": "The Enchanted Forest",
+  "intro": "You awaken in a mysterious enchanted forest. Strange sounds echo through the trees.\nYour adventure begins now...",
+  "start_room": "forest_clearing",
+  "rooms": {
+    "forest_clearing": {
+      "name": "Forest Clearing",
+      "description": "You stand in a small clearing surrounded by towering ancient trees. Sunlight filters through the leaves above. A narrow path leads north into deeper woods, while you can hear the sound of running water to the east.",
+      "exits": {
+        "north": "deep_forest",
+        "east": "river"
+      },
+      "items": [
+        {
+          "name": "stick",
+          "description": "A sturdy wooden stick, perfect for walking or defending yourself.",
+          "usable": true,
+          "use_message": "You wave the stick around menacingly. It's not much, but it's better than nothing."
+        }
+      ]
+    },
+    "deep_forest": {
+      "name": "Deep Forest",
+      "description": "The forest grows darker here. Twisted roots snake across the ground, and mysterious glowing mushrooms provide an eerie light. You feel like you're being watched. A cave entrance is visible to the west.",
+      "exits": {
+        "south": "forest_clearing",
+        "west": "cave"
+      },
+      "items": [
+        {
+          "name": "mushroom",
+          "description": "A glowing blue mushroom. It pulses with an otherworldly light. You've heard these have magical properties.",
+          "usable": true,
+          "use_message": "You eat the mushroom. Your vision swims with colors, and you feel energized! Your wounds heal slightly."
+        },
+        {
+          "name": "rope",
+          "description": "A coil of sturdy rope, about 50 feet long. Always useful for an adventurer.",
+          "usable": false
+        }
+      ]
+    },
+    "river": {
+      "name": "Riverside",
+      "description": "A crystal-clear river flows swiftly past. The water sparkles in the sunlight. You can see fish swimming below the surface. To the north, an old wooden bridge crosses the river.",
+      "exits": {
+        "west": "forest_clearing",
+        "north": "bridge"
+      },
+      "items": [
+        {
+          "name": "bottle",
+          "description": "An empty glass bottle. You could fill it with water from the river.",
+          "usable": true,
+          "use_message": "You fill the bottle with fresh, cool water and take a drink. Refreshing!"
+        }
+      ]
+    },
+    "bridge": {
+      "name": "Old Bridge",
+      "description": "A rickety wooden bridge spans the river. Some planks are missing, and it creaks ominously. On the far side, you can see a village.",
+      "exits": {
+        "south": "river",
+        "north": "village"
+      },
+      "items": []
+    },
+    "village": {
+      "name": "Village Square",
+      "description": "A small, quiet village. A few cottages surround a central square with a well. The villagers seem to have abandoned this place in a hurry.",
+      "exits": {
+        "south": "bridge",
+        "east": "shop"
+      },
+      "items": [
+        {
+          "name": "coin",
+          "description": "A silver coin, stamped with the image of a crown. Currency of the realm.",
+          "usable": false
+        }
+      ]
+    },
+    "shop": {
+      "name": "Abandoned Shop",
+      "description": "An old general store, its shelves mostly bare. Dust covers everything, and cobwebs hang from the corners.",
+      "exits": {
+        "west": "village"
+      },
+      "items": [
+        {
+          "name": "lantern",
+          "description": "An old brass lantern. It still has oil in it and works perfectly.",
+          "usable": true,
+          "use_message": "You light the lantern. Warm light floods the area, pushing back the shadows."
+        },
+        {
+          "name": "map",
+          "description": "A hand-drawn map of the region. It shows the forest, river, village, and a mysterious location marked with an 'X'.",
+          "usable": false
+        }
+      ]
+    },
+    "cave": {
+      "name": "Dark Cave",
+      "description": "A damp, dark cave. You can barely see a few feet ahead. Strange sounds echo from deeper within. You'll need a light source to explore safely.",
+      "exits": {
+        "east": "deep_forest"
+      },
+      "items": [
+        {
+          "name": "crystal",
+          "description": "A beautiful glowing crystal, pulsing with inner light. It seems to contain ancient magic.",
+          "usable": true,
+          "use_message": "You hold the crystal aloft. It glows brighter, and you feel its power flowing through you!"
+        }
+      ]
+    }
+  }
+}
