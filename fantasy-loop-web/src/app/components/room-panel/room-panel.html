@@ -1,0 +1,46 @@
+<div class="room-panel">
+  <h2>Current Location</h2>
+
+  <div *ngIf="currentRoom" class="room-info">
+    <h3 class="room-name">{{ currentRoom.name }}</h3>
+    <p class="room-description">{{ currentRoom.description }}</p>
+
+    <div class="exits" *ngIf="getExits().length > 0">
+      <h4>Exits</h4>
+      <div class="exit-buttons">
+        <button
+          *ngFor="let exit of getExits()"
+          (click)="goDirection(exit)"
+          class="exit-button"
+        >
+          {{ exit }}
+        </button>
+      </div>
+    </div>
+
+    <div class="room-items" *ngIf="currentRoom.items && currentRoom.items.length > 0">
+      <h4>Items Here</h4>
+      <div class="item-list">
+        <div *ngFor="let item of currentRoom.items" class="room-item">
+          <span class="item-name">{{ item.name }}</span>
+          <div class="item-actions">
+            <button (click)="examineItem(item.name)" class="btn-examine" title="Examine">
+              👁️
+            </button>
+            <button (click)="takeItem(item.name)" class="btn-take" title="Take">
+              📥
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-items" *ngIf="!currentRoom.items || currentRoom.items.length === 0">
+      <p>There are no items here.</p>
+    </div>
+  </div>
+
+  <div *ngIf="!currentRoom" class="no-room">
+    <p>You are nowhere...</p>
+  </div>
+</div>

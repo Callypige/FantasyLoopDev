@@ -1,0 +1,25 @@
+<div class="terminal-container">
+  <div class="messages-container" #messagesContainer>
+    <div *ngFor="let message of messages"
+         class="message message-{{ message.type }}"
+         [class.message-command]="message.type === 'command'">
+      <pre>{{ message.text }}</pre>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <form (ngSubmit)="onSubmit()">
+      <label class="prompt">&gt;</label>
+      <input
+        type="text"
+        [(ngModel)]="currentCommand"
+        name="command"
+        class="command-input"
+        autocomplete="off"
+        (keydown)="onKeyDown($event)"
+        placeholder="Enter command..."
+        autofocus
+      />
+    </form>
+  </div>
+</div>

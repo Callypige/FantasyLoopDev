@@ -1,0 +1,139 @@
+{
+  "title": "The Mystery House",
+  "intro": "You've inherited a mysterious old house from a distant relative. Strange things have been reported here. As you step through the front door, it slams shut behind you...",
+  "start_room": "entrance_hall",
+  "rooms": {
+    "entrance_hall": {
+      "name": "Entrance Hall",
+      "description": "You stand in a dusty entrance hall. A grand staircase leads upward, and doors lead east and west. Cobwebs hang from the chandelier above.",
+      "exits": {
+        "up": "upstairs_landing",
+        "east": "kitchen",
+        "west": "living_room"
+      },
+      "items": [
+        {
+          "name": "note",
+          "description": "A yellowed note that reads: 'The secret lies where the sun never shines, but answers illuminate.'",
+          "usable": false
+        }
+      ]
+    },
+    "kitchen": {
+      "name": "Kitchen",
+      "description": "An old-fashioned kitchen with a rusty stove and empty cupboards. A door leads north to the garden. Everything is covered in a thick layer of dust.",
+      "exits": {
+        "west": "entrance_hall",
+        "north": "garden"
+      },
+      "items": [
+        {
+          "name": "knife",
+          "description": "A sharp kitchen knife. Handle with care.",
+          "usable": true,
+          "use_message": "You grip the knife defensively. It might be useful for protection or cutting things."
+        },
+        {
+          "name": "candle",
+          "description": "A half-melted candle. It could provide light in dark places.",
+          "usable": true,
+          "use_message": "You light the candle. A warm glow illuminates your surroundings."
+        }
+      ]
+    },
+    "living_room": {
+      "name": "Living Room",
+      "description": "A once-elegant living room now fallen into disrepair. Faded portraits hang on the walls, their eyes seeming to follow you. A bookshelf covers the north wall.",
+      "exits": {
+        "east": "entrance_hall"
+      },
+      "items": [
+        {
+          "name": "portrait",
+          "description": "A portrait of a stern-looking man in Victorian dress. Behind it, you notice scratches on the wall.",
+          "usable": false
+        },
+        {
+          "name": "book",
+          "description": "An old leather-bound journal. The last entry mentions 'the basement holds the truth.'",
+          "usable": false
+        }
+      ]
+    },
+    "garden": {
+      "name": "Garden",
+      "description": "A wild, overgrown garden. Vines have taken over everything. In the corner, you see what looks like a cellar door, chained shut.",
+      "exits": {
+        "south": "kitchen"
+      },
+      "items": [
+        {
+          "name": "shovel",
+          "description": "A rusty but functional shovel.",
+          "usable": true,
+          "use_message": "You swing the shovel. It could be used to dig or break things."
+        }
+      ]
+    },
+    "upstairs_landing": {
+      "name": "Upstairs Landing",
+      "description": "A dim landing with three doors: one to the east, west, and north. The floorboards creak ominously beneath your feet.",
+      "exits": {
+        "down": "entrance_hall",
+        "east": "bedroom",
+        "west": "bathroom",
+        "north": "study"
+      },
+      "items": []
+    },
+    "bedroom": {
+      "name": "Master Bedroom",
+      "description": "A large bedroom with a four-poster bed covered in dusty sheets. Moonlight filters through torn curtains.",
+      "exits": {
+        "west": "upstairs_landing"
+      },
+      "items": [
+        {
+          "name": "diary",
+          "description": "A personal diary. The last page reads: 'I've hidden the key where I keep my reflection.'",
+          "usable": false
+        }
+      ]
+    },
+    "bathroom": {
+      "name": "Bathroom",
+      "description": "An old bathroom with a cracked mirror and a clawfoot tub. The mirror has strange symbols etched into it.",
+      "exits": {
+        "east": "upstairs_landing"
+      },
+      "items": [
+        {
+          "name": "key",
+          "description": "A brass key hidden behind the mirror. It's cold to the touch.",
+          "usable": true,
+          "use_message": "You hold the key. It must unlock something important..."
+        }
+      ]
+    },
+    "study": {
+      "name": "Study",
+      "description": "A cramped study filled with papers and strange diagrams. A telescope points out the window at the night sky.",
+      "exits": {
+        "south": "upstairs_landing"
+      },
+      "items": [
+        {
+          "name": "map",
+          "description": "A hand-drawn map of the house. It shows a basement that you haven't found yet!",
+          "usable": false
+        },
+        {
+          "name": "telescope",
+          "description": "An expensive brass telescope. Looking through it, you see mysterious lights in the forest beyond.",
+          "usable": true,
+          "use_message": "You peer through the telescope. Strange lights dance in the distant woods..."
+        }
+      ]
+    }
+  }
+}

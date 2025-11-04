@@ -1,0 +1,102 @@
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #0c0c0c;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+  }
+}
+
+.message {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+
+  pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+    font-size: 14px;
+  }
+
+  &.message-system {
+    color: #00ffff;
+  }
+
+  &.message-info {
+    color: #00ff00;
+  }
+
+  &.message-error {
+    color: #ff0000;
+  }
+
+  &.message-success {
+    color: #00ff00;
+    font-weight: bold;
+  }
+
+  &.message-command {
+    color: #ffff00;
+  }
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #00ff00;
+  padding-top: 0.5rem;
+
+  form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .prompt {
+    color: #00ff00;
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+
+  .command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    outline: none;
+    caret-color: #00ff00;
+
+    &::placeholder {
+      color: #006600;
+    }
+  }
+}
