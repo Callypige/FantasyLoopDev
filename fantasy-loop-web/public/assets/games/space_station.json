@@ -1,0 +1,129 @@
+{
+  "title": "Space Station Alpha",
+  "intro": "You wake up from cryo-sleep aboard Space Station Alpha. Something is wrong - the station is on emergency power and the corridors are eerily quiet. You need to find out what happened and restore the station's systems.",
+  "start_room": "cryo_bay",
+  "rooms": {
+    "cryo_bay": {
+      "name": "Cryo-Sleep Bay",
+      "description": "Rows of cryo-pods line the walls, all empty except for yours. Emergency lights cast everything in red. A door leads north to the main corridor.",
+      "exits": {
+        "north": "corridor_central"
+      },
+      "items": [
+        {
+          "name": "tablet",
+          "description": "A personal data tablet. Its last log entry shows 'System failure detected. Emergency protocols initiated.'",
+          "usable": false
+        }
+      ]
+    },
+    "corridor_central": {
+      "name": "Central Corridor",
+      "description": "The main corridor of the station. Signs point to different sections: Bridge (north), Engineering (east), Medical (west), and Cryo Bay (south).",
+      "exits": {
+        "north": "bridge",
+        "east": "engineering",
+        "west": "medical",
+        "south": "cryo_bay"
+      },
+      "items": []
+    },
+    "bridge": {
+      "name": "Command Bridge",
+      "description": "The station's command center. Multiple screens display error messages. The captain's chair sits empty. Through the viewport, you see distant stars.",
+      "exits": {
+        "south": "corridor_central"
+      },
+      "items": [
+        {
+          "name": "log",
+          "description": "The captain's log: 'Unidentified energy signature detected. Evacuating non-essential personnel. I'm staying to secure the station.'",
+          "usable": false
+        },
+        {
+          "name": "keycard",
+          "description": "A captain's keycard with full access permissions.",
+          "usable": true,
+          "use_message": "You swipe the keycard. Authorization granted."
+        }
+      ]
+    },
+    "engineering": {
+      "name": "Engineering Bay",
+      "description": "The heart of the station. The main reactor is running on minimal power. Control panels flash warnings. A door leads to the reactor core (north).",
+      "exits": {
+        "west": "corridor_central",
+        "north": "reactor_core"
+      },
+      "items": [
+        {
+          "name": "toolkit",
+          "description": "A complete engineering toolkit with various repair implements.",
+          "usable": true,
+          "use_message": "You open the toolkit. The tools might help repair damaged systems."
+        },
+        {
+          "name": "manual",
+          "description": "A reactor maintenance manual. It emphasizes the importance of proper cooling procedures.",
+          "usable": false
+        }
+      ]
+    },
+    "reactor_core": {
+      "name": "Reactor Core",
+      "description": "The station's fusion reactor pulses with contained energy. Warning signs are posted everywhere. This is where the power comes from.",
+      "exits": {
+        "south": "engineering"
+      },
+      "items": [
+        {
+          "name": "coolant",
+          "description": "Emergency coolant reserves. Critical for reactor safety.",
+          "usable": true,
+          "use_message": "You activate the emergency coolant. The reactor temperature begins to stabilize."
+        }
+      ]
+    },
+    "medical": {
+      "name": "Medical Bay",
+      "description": "The station's medical facility. Empty beds line the walls. Medical supplies are scattered about. A door leads to the laboratory (north).",
+      "exits": {
+        "east": "corridor_central",
+        "north": "laboratory"
+      },
+      "items": [
+        {
+          "name": "medkit",
+          "description": "A fully stocked medical kit with various medicines and bandages.",
+          "usable": true,
+          "use_message": "You apply the medkit. Your health improves. Always good to be prepared."
+        },
+        {
+          "name": "scanner",
+          "description": "A medical tricorder-style scanner. It can detect life signs and environmental hazards.",
+          "usable": true,
+          "use_message": "You activate the scanner. It beeps softly, displaying environmental data."
+        }
+      ]
+    },
+    "laboratory": {
+      "name": "Research Laboratory",
+      "description": "A high-tech laboratory with sophisticated equipment. Research notes are scattered everywhere. Someone was studying something important here.",
+      "exits": {
+        "south": "medical"
+      },
+      "items": [
+        {
+          "name": "sample",
+          "description": "An unusual crystalline sample contained in a stasis field. It emits a faint blue glow.",
+          "usable": false
+        },
+        {
+          "name": "notes",
+          "description": "Research notes: 'The crystal exhibits properties unlike anything we've seen. It may be the key to understanding the energy signature.'",
+          "usable": false
+        }
+      ]
+    }
+  }
+}

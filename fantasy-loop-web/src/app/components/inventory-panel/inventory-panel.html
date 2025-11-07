@@ -1,0 +1,35 @@
+<div class="inventory-panel">
+  <h2>Inventory</h2>
+
+  <div class="stats" *ngIf="player">
+    <div class="stat">
+      <span class="label">Name:</span>
+      <span class="value">{{ player.name }}</span>
+    </div>
+    <div class="stat">
+      <span class="label">Health:</span>
+      <span class="value health">{{ player.health }}/{{ player.max_health }}</span>
+    </div>
+  </div>
+
+  <div class="items" *ngIf="player">
+    <div *ngIf="player.inventory.length === 0" class="empty">
+      Your inventory is empty
+    </div>
+
+    <div *ngFor="let item of player.inventory" class="item">
+      <div class="item-name">{{ item.name }}</div>
+      <div class="item-actions">
+        <button (click)="examineItem(item.name)" class="btn-examine" title="Examine">
+          👁️
+        </button>
+        <button *ngIf="item.usable" (click)="useItem(item.name)" class="btn-use" title="Use">
+          ⚡
+        </button>
+        <button (click)="dropItem(item.name)" class="btn-drop" title="Drop">
+          🗑️
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

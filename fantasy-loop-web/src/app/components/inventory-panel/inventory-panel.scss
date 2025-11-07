@@ -1,0 +1,131 @@
+.inventory-panel {
+  background-color: #1a1a1a;
+  color: #00ff00;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+
+  h2 {
+    color: #00ffff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 0.5rem;
+  }
+
+  .stats {
+    margin-bottom: 1.5rem;
+    background-color: #0c0c0c;
+    padding: 0.75rem;
+    border: 1px solid #00ff00;
+    border-radius: 4px;
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .label {
+        font-weight: bold;
+        color: #00ffff;
+      }
+
+      .value {
+        color: #00ff00;
+
+        &.health {
+          color: #ff6600;
+        }
+      }
+    }
+  }
+
+  .items {
+    .empty {
+      text-align: center;
+      color: #666;
+      padding: 2rem;
+      font-style: italic;
+    }
+
+    .item {
+      background-color: #0c0c0c;
+      border: 1px solid #00ff00;
+      border-radius: 4px;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #1a2a1a;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+      }
+
+      .item-name {
+        font-weight: bold;
+        flex: 1;
+      }
+
+      .item-actions {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+          background: none;
+          border: 1px solid #00ff00;
+          color: #00ff00;
+          cursor: pointer;
+          padding: 0.25rem 0.5rem;
+          font-size: 1rem;
+          border-radius: 4px;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: #00ff00;
+            color: #0c0c0c;
+          }
+
+          &.btn-examine {
+            border-color: #00ffff;
+            color: #00ffff;
+
+            &:hover {
+              background-color: #00ffff;
+              color: #0c0c0c;
+            }
+          }
+
+          &.btn-use {
+            border-color: #ffff00;
+            color: #ffff00;
+
+            &:hover {
+              background-color: #ffff00;
+              color: #0c0c0c;
+            }
+          }
+
+          &.btn-drop {
+            border-color: #ff0000;
+            color: #ff0000;
+
+            &:hover {
+              background-color: #ff0000;
+              color: #0c0c0c;
+            }
+          }
+        }
+      }
+    }
+  }
+}

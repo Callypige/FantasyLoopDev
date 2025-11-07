@@ -1,0 +1,46 @@
+{
+  "title": "My Game Title",
+  "intro": "Write your game's introduction here. Set the scene and give the player their initial goal.",
+  "start_room": "room_1",
+  "rooms": {
+    "room_1": {
+      "name": "First Room Name",
+      "description": "Describe what the player sees, hears, and feels. Make it vivid and interesting.",
+      "exits": {
+        "north": "room_2",
+        "east": "room_3"
+      },
+      "items": [
+        {
+          "name": "item_name",
+          "description": "Detailed description of the item. What does it look like? What's special about it?",
+          "usable": false,
+          "use_message": "If usable is true, this message shows when the item is used."
+        }
+      ]
+    },
+    "room_2": {
+      "name": "Second Room Name",
+      "description": "Another room description. Connect your rooms with exits to create a world.",
+      "exits": {
+        "south": "room_1"
+      },
+      "items": [
+        {
+          "name": "usable_item",
+          "description": "An item that can be used, like a torch or potion.",
+          "usable": true,
+          "use_message": "You use the item! Describe what happens."
+        }
+      ]
+    },
+    "room_3": {
+      "name": "Third Room Name",
+      "description": "Keep adding rooms to expand your world. Consider having 5-10 rooms for a complete experience.",
+      "exits": {
+        "west": "room_1"
+      },
+      "items": []
+    }
+  }
+}
